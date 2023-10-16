@@ -1,0 +1,12 @@
+
+program 11 
++
+
+
+a.List the details of Students who are all studying in 2nd sem MCA. 
+select * from student where Sem=2 and Branchid in (select 
+Branchid from branch where bname='MCA');
+
+b. List the students who are not borrowed any books.
+select * from student where USN not in (select USN from 
+Borrow);

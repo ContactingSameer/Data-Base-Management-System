@@ -1,0 +1,5 @@
+a. Find the students whose name ends with the alphabets “AR”. 
+select NAME from STUDENTS where NAME LIKE '%AR’;
+
+b.Delete the student details whose USN is given as 1001.
+Delete from students where usn=1001;

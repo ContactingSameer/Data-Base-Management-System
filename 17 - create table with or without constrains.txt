@@ -1,0 +1,34 @@
+CREATE TABLE STUDENT WITHOUT CONSTRAINT:-
+create table students(USN varchar(20),name varchar(20),dob 
+varchar(20),branch varchar(20),mark1 int,mark2 int,mark3 int, 
+total int, GPA varchar (20));
+
+DESCRIBE:-
+desc students;
+
+CREATE TABLE STUDENT WITH CONSTRAINT:-
+alter table students modify USN varchar(20) Primary Key; 
+
+DESCRIBE:-
+desc students; 
+
+INSERT VALUES:-
+Insert into Students values (‘1001’, ‘Rakshitha’, ’29-July-1999’, 
+‘MCA’, 79, 86, 65, 230, ‘A’);
+
+View the table:
+Select *from students;
+
+Update the table:
+Update Branch Set Bname='MCA' Where branchid='1';
+
+Delete the table:
+Delete from students Where USN='1002’;
+Select *from Students; 
+
+Commit:
+Commit;
+
+Rollback:
+Rollback;
+Select *from student;

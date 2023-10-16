@@ -1,0 +1,37 @@
+ALTERING THE TABLES
+Here, we will alter a particular table.
+For example , here we will alter works_on table.
+
+ADDING THE NEW FIELD:
+MySQL> alter table works_on add Dno varchar(20);
+Here we added a new field name dno using the keyword ADD.
+
+MODIFYING THE FIELD DNO:
+MySQL> alter table works_on modify Dno int(20);
+Here, we changed the field Dno type from varchar(20) to int(20) using the keyword
+modify.
+
+RENAMING THE FIELD DNO:
+MySQL> alter table works_on change column dno dnumber int(20);
+Here, we changed the field Dno to dnumber by using the keyword change column.
+
+DROPPING THE FIELD DNO:
+MySQL> alter table works_on drop column Dno;
+Here, we the dropped the column Dno using the keyword Drop column.
+
+RENAMING THE TABLE :
+MySQL> alter table works_on rename to assignment_on;
+Here we changed the table Works_on name to assignment_on. To verify you can see
+it consists of same fields as above.
+
+DROP COMMAND USAGE:
+DROP TABLE command is used to delete the complete table, but it will remove
+complete table data and structure both. You need to re-create the table again if you
+have to store some data.
+Here, we will create a table called locations with the fields districts and pincode to
+perform the drop operation.
+MySQL> drop table locations;
+
+RENAMING THE TABLE:
+It simply renames the table.
+MySQL> rename table locations to locationhub;

@@ -1,0 +1,7 @@
+a. Find the GPA score of all the students. 
+SELECT GPA From students;
+
+b. Find the students who born on a parƟcular year of birth from 
+the date_of_birth column.
+MYSQL>SELECT name, dob FROM students WHERE 
+EXTRACT(YEAR FROM dob) = 1999;

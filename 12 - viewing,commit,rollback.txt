@@ -1,0 +1,14 @@
+
+program 11
++ 
+
+Saving(Commit)
+SQL> Commit;
+-----
+DeleƟng records from a table
+Delete from borrow where bookid=’3333’;
+Select * from borrow;
+------
+Undoing(Rollback)
+Rollback;
+Select * from borrow;

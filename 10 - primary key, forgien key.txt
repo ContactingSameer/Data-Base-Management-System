@@ -1,0 +1,19 @@
+MySQL> create table emp(empname varchar(10), deptno int(5), deptname
+varchar(20), salary int(10));
+
+insert into emp values('Mani',1,'Accounts',10000);
+insert into emp values('Mahesh',1,'Accounts',20000);
+
+
+CreaƟng views without check option : 
+MYSQL>create view salary as select salary from employees;
+select * from salary;
+
+CreaƟng views with check option : 
+MYSQL>create view salary1 as select salary from employees 
+where superssn is not null with check option;
+
+
+Drop view:
+drop view salary1;
+select * from salary1;

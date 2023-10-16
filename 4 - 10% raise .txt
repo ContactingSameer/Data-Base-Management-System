@@ -1,0 +1,17 @@
+MySQL> create table emp(empname varchar(10), deptno int(5), deptname
+varchar(20), salary int(10));
+
+insert into emp values('Mani',1,'Accounts',10000);
+insert into emp values('Mahesh',1,'Accounts',20000);
+--------------
+(a)
+MySQL> select empname,salary+salary*0.1
+incresed_sal,deptname from emp where deptno=2;
+-------
+(b)
+Usage of Aggregate function for the Accounts
+department.
+MySQL> select deptno, sum(salary) AS 'total_salary',
+avg(salary) as 'average_salary',max(salary) AS
+'max_salary',min(salary) AS 'min_salary' from employee
+group by deptno having deptno=1;

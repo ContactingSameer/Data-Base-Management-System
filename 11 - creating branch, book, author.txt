@@ -1,0 +1,44 @@
+BRANCH TABLE
+create table branch(branchid int primary key,bname 
+varchar(15),HOD varchar(15));
+
+insert into branch(branchid,bname,HOD) values(1,'MCA','Prof. 
+Gomathi');
+
+select * from branch;
+--------
+STUDENT TABLE
+create table student(USN varchar(10) primary key,Name 
+varchar(10),Address varchar(10),Branchid varchar(10),Sem 
+varchar(5));
+
+insert into student(USN,Name,Address,Branchid,Sem) 
+values('1CR01','Harish','Bangalore','1','2'),
+select * from student;
+------------
+BOOK TABLE
+create table book(Bookid int primary key,Bookname 
+varchar(10),Authorid int,Publisher varchar(10), Branchid int);
+
+insert into book(Bookid,Bookname,Authorid,Publisher,Branchid) 
+values(1111,'C Prog',123,'Pearson',1),
+
+select * from book;
+-----------
+AUTHOR TABLE
+create table author(Authorid int primary key,Authorname 
+varchar(10),Country varchar(10),age int);
+
+insert into author(Authorid,Authorname,Country,age) 
+values(123,'Navathe','India',55),;
+
+select * from author;
+----------
+BORROW TABLE
+create table Borrow(USN varchar(10),Bookid int,Borrowed_Date 
+varchar(10));
+
+insert into Borrow(USN,Bookid,Borrowed_Date) 
+values('1CR01',2222,'10.Jan.00');
+
+select * from Borrow;

@@ -1,0 +1,8 @@
+a. Find the students whose name starts with the alphabet “S”. 
+select NAME from STUDENTS where NAME LIKE 'S%' order by 
+NAME;
+
+b. Update the column total by adding the columns mark1, 
+mark2, mark3.
+update Students set total=mark1+mark2+mark3;
+

@@ -1,0 +1,17 @@
+create table employee4(fname varchar(10), mname varchar(10), lname varchar(10), dname varchar(10), dno varchar(10));
+desc employee4;
+insert into employee4 values('Sharad','Kumar','Yadav','Research','d005');
+insert into employee4 values('Sneha','S','Shet','Research','d005');
+
+select * from employee4;
+
+create table department(dname varchar(10), dno varchar(10));
+desc department;
+insert into department values('Research','d005');
+insert into department values('Accounts','d002');
+
+select * from department;
+
+select e.fname, e.mname, e.lname, d.dname,d.dno from employee4 e,department d where exists (select dno from employee4 where e.dno='d005' and d.dno=e.dno);
+
+select d.dname, count(*) as "no_of_emp" from department d inner join employee4 e on e.dno=d.dno group by d.dno, d.dname having count(*)>1;

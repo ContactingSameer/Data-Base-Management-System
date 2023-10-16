@@ -1,0 +1,28 @@
+MySQL> SELECT COUNT (*) FROM employee;
+COUNT(distinct expression) Function: This function returns the count of distinct
+rows without containing NULL values as the result of the expression.
+MySQL> SELECT COUNT(DISTINCT superssn) FROM employee;
+
+COUNT(expression) Function: This function returns the result set without
+containing Null rows as the result of an expression.
+MySQL> SELECT COUNT(superssn) FROM employee;
+
+MySQL sum() function
+MySQL> SELECT SUM(Salary) AS "Total salary" FROM employee;
+MySQL sum() function with WHERE clause
+MySQL> SELECT SUM(Salary) AS "Total Salary" FROM employee WHERE
+salary<=55000;
+
+MySQL avg() function
+MySQL> SELECT AVG(salary) Average_Salary FROM employee;
+MySQL> SELECT AVG(Salary) Avg_Salary FROM employee WHERE Salary<=55000;
+
+MySQL MIN() Function
+MySQL> SELECT MIN(Salary) AS Minimum_Salary FROM employee;
+MySQL> SELECT MIN(Salary) AS Minimum_Salary FROM employee where
+superssn>='sup001' and superssn<='sup003';
+
+MySQL MAX() Function Example
+MySQL> SELECT MAX(salary) AS "Maximum Salary" FROM employee;
+MySQL> SELECT MAX(salary) AS "Maximum Salary" FROM employee where superssn>='sup001'
+and superssn<='sup003';

@@ -1,0 +1,15 @@
+program 11
++
+
+
+
+a. Display the student details who borrowed more than two 
+books. 
+select * from student where USN in (select USN from Borrow 
+group by USN having count(USN)>=2);
+
+b. Display the student details who borrowed books of more than 
+one Author
+select * from student s where exists (select br.USN from Borrow 
+br join book bk on br.Bookid=bk.Bookid where br.USN=s.USN 
+group by USN having count(disƟnct Authorid)>1);

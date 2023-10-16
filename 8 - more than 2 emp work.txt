@@ -1,0 +1,25 @@
+create table project(pno varchar(10),pname(20));
+desc project;
+insert into project ('P001','Iot based Model');
+insert into project ('P004','Cloud based Model');
+
+Select * from project;
+
+Create table workon (essn varchar(10),pnum varchar(10));
+desc workon;
+insert into workon values('e001','P001');
+insert into workon values('e002','P001');
+insert into workon values('e003','P001');
+
+select * from project;
+select * from workon;
+
+create table employee2 (fname varchar(10),lname varchar(10),bdate date);
+insert into employee2 values('Naina','Rao','2000-03-11');
+insert into employee2 values('Sneha','Pai','1990-06-09');
+
+select * from employee2;
+------
+
+MySQL> SELECT PNUMBER, PNAME, COUNT(*) FROM PROJECT, WORKS_ON WHERE 
+PNUMBER=PNO GROUP BY PNUMBER, PNAME HAVING COUNT(*)>2; 

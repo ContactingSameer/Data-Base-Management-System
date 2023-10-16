@@ -1,0 +1,11 @@
+a. List the students who are studying in a parƟcular branch of 
+study. 
+Select usn,name from students where branch=’MCA’;
+
+b. Find the maximum GPA score of the student branch-wise
+UPDATE students SET gpa = CASE
+ WHEN gpa = 'A+' THEN 4.0
+ WHEN gpa = 'A' THEN 4.0
+ WHEN gpa = 'B+' THEN 3.5
+ WHEN gpa = 'B' THEN 3.0
+ End;

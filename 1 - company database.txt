@@ -1,0 +1,42 @@
+INSERTING THE RECORDS into EMPLOYEE TABLE:
+insert into employee values (fname,
+minit,lname,ssn,bdate,address,sex,salary,superssn,dno)
+
+insert into employee values('manish','M','pandey','MCA001','1989-09-12','#43,jk street,
+Bangalore','male',56000,'SUP001','dept001');
+-----
+DEPARTMENT (DNAME, DNUMBER,MGRSSN,MSRSTARTDATE) 
+DEPT_LOCATIONS (DNUMBER, DLOCATION)
+
+• insert into department values(dno, dname, mgrssn,mgrstartdate)
+values('dept001','marketing','MCA001','1989-09-12');
+• insert into department values (dno, dname, mgrssn,mgrstartdate)
+values('dept002','Commercial','MCA002','1991-09-10');
+------
+DEPT_LOCATIONS (DNUMBER, DLOCATION) 
+
+INSERTING THE RECORDS in DEPT_LOCATIONS TABLE
+mysql> insert into dept_locations values('dept001', 'Cunningham road, Banglore-05');
+mysql> insert into dept_locations values('dept002', ' Cunningham road, Banglore-05');
+mysql> insert into dept_locations values('dept005', ' Malleswaram, Banglore-13');
+--------
+PROJECT (PNAME, PNUMBER, PLOCATION, DNUM) WORKS_ON (ESSN, 
+PNO,HOURS) 
+
+• Insert into PROJECT values(‘SMART
+Jarvis’,200123,’Bangalore’,’D001’);
+• Insert into PROJECT values(‘Compiler
+Design’,200124,’Bangalore’,’D002’);
+----------
+WORKS_ON (ESSN, PNO,HOURS)  
+
+mysql> Insert into WORKS_ON values('PJ001',200123,'20hours');
+mysql> Insert into WORKS_ON values('PJ002',200124,'13hours');
+
+----------
+WORKS_ON TABLE (essn, dependent name, sex, bdate, relationship) 
+
+INSERTING THE RECORDS in WORKS_ON TABLE
+Insert into DEPENDENT values(‘PJ001’, ’VIJAY’,’male’,1968, ‘SOFTWARE ENGINNER Dept’);
+Insert into DEPENDENT values(‘PJ002’, ’Jagdeesh’,’male’,1964,’SOFTWARE Analyst Dept’);
+

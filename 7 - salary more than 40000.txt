@@ -1,0 +1,17 @@
+create table department1(dno int,dname varchar(10));
+insert into department1 values('101','admin');
+insert into department1 values('102','research');
+
+
+select *from department1;
+create table employee9(dnum int,salary int,ename varchar(10));
+
+desc employee9;
+insert into employee9 values('101',50000,'naina');
+insert into employee9 values('102',49000,'sneha');
+
+select *from employee9;
+
+select dno,count(*) from department1,employee9 where dno=dnum a
+nd salary>40000 and dnum in (select dnum from employee9 group by 
+dnum having count(*)>1) group by dno;
